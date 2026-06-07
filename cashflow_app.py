@@ -10,14 +10,18 @@ if age >= 18:
 	print('Phone number')
 	Phone_number = input()
 	
+	is_valid=True 
 	
 	if '@gmail.com' not in email_address:
 		print('Invalid email address')
+		is_valid=False
+		
 	if '0' not in Phone_number:
 		print('Invalid phone number')
+		is_valid=False
 		
-	else:
-		print("Application successful")
+	if is_valid:
+		print('Application successful')
 		
 else:
 	print('Too young to apply')
